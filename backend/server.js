@@ -12,9 +12,10 @@ import signUpRouter from './routers/userRouters/signUpRouter.js'
 dotenv.config();
 
 const app= express();
+app.use(cors());
 
 app.use(express.json())
-app.use(cors());
+
 
 app.use('/users/login',loginRouter)
 app.use('/users/register',signUpRouter)
