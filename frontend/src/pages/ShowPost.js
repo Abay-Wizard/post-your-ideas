@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import BackButton from '../components/BackButton';
 import { FiEdit, FiTrash2 } from 'react-icons/fi';
+import api from '../asset/react_API';
 
 
 const ShowPost = () => {
@@ -11,7 +12,7 @@ const ShowPost = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/users/post');
+        const res = await axios.get(`${api}/users/post`);
         setPosts(res.data.data);
       } catch (error) {
         console.error('Error fetching posts:', error);

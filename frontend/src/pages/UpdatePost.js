@@ -13,7 +13,7 @@ const UpdatePost = () => {
   const {id} =useParams();
   useEffect(()=>{
    const fetchPost =async()=>{
-    const res= await axios.get(`http://localhost:5000/users/post/${id}`)
+    const res= await axios.get(`${api}/users/post/${id}`)
     setTitle(res.data.data.title)
     setPost(res.data.data.post)
    }
