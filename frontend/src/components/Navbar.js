@@ -9,7 +9,7 @@ const Navbar = () => {
       src='https://logo.com/image-cdn/images/kts928pd/production/d12dfdbd6b7501faf694ac42775f19451aee8805-324x328.png?w=1080&q=72&fm=webp' 
       alt='blog icon' 
     />
-    <h1 className='text-4xl sm:text-6xl text-purple-800'>Go Blog Your Ideas!</h1> 
+    <h1 className='text-4xl sm:text-6xl text-red-800'>Go Blog Your Ideas!</h1> 
   </div>
 </section>
   )
