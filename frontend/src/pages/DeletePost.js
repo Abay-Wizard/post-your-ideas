@@ -19,10 +19,15 @@ const DeletePost = () => {
    }
   }
  return (
-  <div className='px-10 py-12 flex flex-col items-center gap-5'>
-    <h1 className='text-red-600 text-xl'>Are you sure you want to delete the post?</h1>
-    <button onClick={handleDeletePost} className='bg-gray-800 text-white py-2 px-2 rounded-lg'>Yes delete it</button>
-  </div>
+  <div className='px-4 sm:px-10 py-12 flex flex-col items-center gap-5'>
+  <h1 className='text-red-600 text-xl text-center'>Are you sure you want to delete the post?</h1>
+  <button 
+    onClick={handleDeletePost} 
+    className='bg-gray-800 text-white py-2 px-4 sm:px-6 rounded-lg'
+  >
+    Yes, delete it
+  </button>
+</div>
  )
 };
 

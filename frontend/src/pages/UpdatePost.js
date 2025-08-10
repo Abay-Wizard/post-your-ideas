@@ -35,15 +35,35 @@ const handleEditPost= async()=>{
 }
   return (
     <section className='bg-slate-50 mx-auto py-20 w-full'>
-      <div className='flex flex-col items-center gap-8 w-full'>
-         <h1 className='text-gray-800 font-semibold text-2xl'> Edit Post</h1>
-         <form className='flex flex-col gap-8 w-1/2 lg:w-1/3' action={handleEditPost}>
-          <input className='rounded-lg py-3 px-2' type='text' placeholder='Post title' value={title} onChange={(e)=>setTitle(e.target.value)}/>
-          <textarea className='rounded-lg py-3 px-2' type='text' placeholder='Post message' value={post} onChange={(e)=>setPost(e.target.value)} rows='6'></textarea>
-          <button type='submit' className='bg-gray-800 text-white rounded-lg py-3 px-2'>Save</button>
-         </form>
-      </div>
-    </section>
+  <div className='flex flex-col items-center gap-8 w-full'>
+    <h1 className='text-gray-800 font-semibold text-2xl text-center'>Edit Post</h1>
+    <form 
+      className='flex flex-col gap-8 w-full sm:w-3/4 md:w-2/3 lg:w-1/3' 
+      action={handleEditPost}
+    >
+      <input 
+        className='rounded-lg py-3 px-2' 
+        type='text' 
+        placeholder='Post title' 
+        value={title} 
+        onChange={(e) => setTitle(e.target.value)} 
+      />
+      <textarea 
+        className='rounded-lg py-3 px-2' 
+        placeholder='Post message' 
+        value={post} 
+        onChange={(e) => setPost(e.target.value)} 
+        rows='6'
+      />
+      <button 
+        type='submit' 
+        className='bg-gray-800 text-white rounded-lg py-3 px-2'
+      >
+        Save
+      </button>
+    </form>
+  </div>
+</section>
   )
 }
 
